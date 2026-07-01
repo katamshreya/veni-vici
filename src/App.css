@@ -1,0 +1,302 @@
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* ---------- Masthead ---------- */
+.masthead {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin: 0 0 8px;
+}
+
+.masthead h1 {
+  font-size: clamp(40px, 8vw, 64px);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+  color: var(--moss-deep);
+}
+
+.subhead {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  opacity: 0.75;
+  max-width: 460px;
+  margin: 12px auto 0;
+}
+
+/* ---------- Stage / specimen card ---------- */
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.specimen-card {
+  width: 100%;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  padding: 28px;
+  position: relative;
+  box-shadow: 6px 6px 0 var(--moss-deep);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--ink);
+  opacity: 0.7;
+}
+
+.empty-frame {
+  width: 72px;
+  height: 72px;
+  border: 2px dashed var(--ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 28px;
+}
+
+.specimen-photo-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.specimen-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.specimen-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--mustard);
+  border: 1px solid var(--ink);
+  border-radius: 3px;
+  padding: 2px 8px;
+  transform: rotate(3deg);
+}
+
+.specimen-name {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 28px;
+  margin: 0 0 20px;
+  color: var(--moss-deep);
+}
+
+.specimen-stats {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: start;
+  gap: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.stat-row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.stat-row dt {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin: 0;
+  padding-top: 6px;
+}
+
+.stat-row dd {
+  margin: 0;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.error-note {
+  margin: 16px 0 0;
+  color: var(--rust);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ---------- Chips ---------- */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-transform: capitalize;
+  background: var(--cream);
+  border: 1px solid var(--ink);
+  border-radius: 20px;
+  padding: 5px 14px;
+  color: var(--ink);
+  transition: transform 0.1s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+}
+
+.chip--banned {
+  background: var(--rust);
+  border-color: var(--rust);
+  color: var(--cream);
+  text-decoration: line-through;
+}
+
+/* ---------- Discover button ---------- */
+.discover-btn {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--cream);
+  background: var(--moss-deep);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 14px 36px;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.discover-btn:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.discover-btn:active:not(:disabled) {
+  transform: translate(0, 0);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.discover-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Ban list ---------- */
+.ban-list {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.ban-list h3,
+.history h3 {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ban-list h3::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--rust);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ban-list-empty {
+  font-size: 14px;
+  color: var(--ink);
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* ---------- History ---------- */
+.history {
+  margin-top: 48px;
+}
+
+.history-strip {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.history-card {
+  flex: 0 0 auto;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  padding: 10px 8px;
+  font-size: 12px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.history-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.history-card span.mono {
+  font-size: 10px;
+  color: var(--moss);
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .stat-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .stat-row dt {
+    padding-top: 0;
+  }
+}

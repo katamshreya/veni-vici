@@ -1,0 +1,51 @@
+:root {
+  /* Field-log palette */
+  --cream: #f2ecd8;
+  --paper: #e9e0c4;
+  --ink: #2b2a24;
+  --moss: #3f5a44;
+  --moss-deep: #29402e;
+  --mustard: #d9a441;
+  --rust: #b5533c;
+  --line: rgba(43, 42, 36, 0.18);
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(43, 42, 36, 0.06) 1px, transparent 0);
+  background-size: 14px 14px;
+  color: var(--ink);
+  font-family: var(--font-display);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
